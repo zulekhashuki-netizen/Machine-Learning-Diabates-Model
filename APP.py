@@ -14,6 +14,8 @@ model = LinearRegression() # create an instance of the linear regression model
 model.fit(X, y) # fit the model to the entire dataset
 
 # define title and description
+st.write("Zullu the ML Engineer")
+
 st.title("Diabetes Dataset Linear Regression")
 st.write("" \
 "This is a simple linear regression model for predicting diabetes progression." \

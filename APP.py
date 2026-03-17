@@ -1,10 +1,11 @@
 # import libraries
+import joblib
 import numpy as np
 import streamlit as st
 from sklearn.linear_model import LinearRegression
 from sklearn.datasets import load_diabetes
 
-# load the diabetes dataset
+# load the diabetes dataaset
 diabetes = load_diabetes()
 X = diabetes.data # features
 y = diabetes.target # target variable
@@ -44,7 +45,8 @@ st.write("Predicted Diabetes Progression:")
 if age and sex  and bmi and bp and s1 and s2 and s3 and s4 and s5 and s6:
     input_data = np.array([age, sex, bmi, bp, s1, s2, s3, s4, s5, s6]) # create a 2D array for the input data
     model = LinearRegression() # create an instance of the linear regression model
-    model.fit(X, y) # fit the model to the training data
+    model.fit(X, y) # fit the model to the entire dataset
+
 
 
 
@@ -62,3 +64,7 @@ if st.button("Refresh"):
 
 # output results
 st.write("This prediction is based on the input features provided and the linear regression model trained on the diabetes dataset.")
+
+
+
+
